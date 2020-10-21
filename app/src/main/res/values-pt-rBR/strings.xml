@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">UniLotto</string>
-    <string name="text_description">Do your Game:</string>
+    <string name="text_description">Faça seu Jogo:</string>
     <string name="number_default">00</string>
-    <string name="button_action">Raffle</string>
+    <string name="button_action">Sorteio</string>
     <string name="unilotto_logo">Unilotto Logo</string>
 </resources>
