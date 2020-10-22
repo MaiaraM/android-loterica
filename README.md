@@ -1,5 +1,7 @@
 # :unicorn: UNILOTTO 
 
+<image width="100" height="100" src="https://github.com/MaiaraM/android-loterica/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/>
+
 Aplicação Android Nativa (Java) para controle de resultado de uma loteria.
 
 <p align="center">
