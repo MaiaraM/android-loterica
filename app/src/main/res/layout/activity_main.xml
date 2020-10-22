@@ -86,6 +86,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:gravity="center"
         android:orientation="vertical"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,8 +101,6 @@
             android:id="@+id/numberResult"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
             android:gravity="center"
@@ -133,6 +132,12 @@
 
         </LinearLayout>
 
+
+        <ImageView
+            android:id="@+id/imageFinal"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:layout_width="fill_parent"

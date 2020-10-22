@@ -8,4 +8,6 @@
     <string name="number_raffle">Numbers Drawn:</string>
     <string name="result">Result:</string>
     <string name="hits">Hits</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="you_won_the_award">You won the award</string>
 </resources>

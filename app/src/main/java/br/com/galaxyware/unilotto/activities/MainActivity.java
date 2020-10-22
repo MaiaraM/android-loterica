@@ -6,22 +6,25 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import br.com.galaxyware.unilotto.R;
+import br.com.galaxyware.unilotto.WinModalFragment;
 import br.com.galaxyware.unilotto.utils.InputFilterMinMax;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
 
     private final int MIN = 1;
     private  final int MAX = 50;
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.button) Button button;
     @BindView(R.id.containerResult) LinearLayout containerResult;
     @BindView(R.id.resultText) TextView resultText;
+    @BindView(R.id.imageFinal) ImageView imageFinal;
 
 
     @Override
@@ -73,27 +77,28 @@ public class MainActivity extends AppCompatActivity {
         resultText.setText(String.valueOf(rights));
         containerResult.setVisibility(View.VISIBLE);
 
-        //changeButtonToReset();
+        if(rights == 0 ){
+           imageFinal.setImageResource(R.drawable.ic_bad);
+        }else if (rights == 1 || rights == 2){
+            imageFinal.setImageResource(R.drawable.ic_middle);
+        }else if (rights == 3 || rights == 4){
+            imageFinal.setImageResource(R.drawable.ic_upper);
+        }else{
+            imageFinal.setImageResource(R.drawable.ic_full);
+            showWinDialog();
+        }
+
+        changeButtonToReset();
     }
 
     private void changeButtonToReset() {
         button.setText(R.string.button_reset);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                resetData();
-            }
-        });
+        button.setOnClickListener(v -> resetData());
     }
 
     private void changeButtonToRaffle() {
         button.setText(R.string.button_action);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendNumber(v);
-            }
-        });
+        button.setOnClickListener(v -> sendNumber(v));
     }
 
 
@@ -137,6 +142,12 @@ public class MainActivity extends AppCompatActivity {
         containerResult.setVisibility(View.INVISIBLE);
 
         changeButtonToRaffle();
+    }
+
+    private void showWinDialog(){
+        WinModalFragment yesNoAlert = WinModalFragment.newInstance();
+        yesNoAlert.show(getSupportFragmentManager(), "Win");
+
     }
 
 

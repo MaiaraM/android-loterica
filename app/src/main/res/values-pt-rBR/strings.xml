@@ -8,4 +8,6 @@
     <string name="number_raffle">Números Sorteados:</string>
     <string name="button_reset">Resetar</string>
     <string name="hits">Acertos</string>
+    <string name="congratulations">Parabéns!</string>
+    <string name="you_won_the_award">Você ganhou o prêmio</string>
 </resources>
