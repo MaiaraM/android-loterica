@@ -4,4 +4,8 @@
     <string name="number_default">00</string>
     <string name="button_action">Sorteio</string>
     <string name="unilotto_logo">Unilotto Logo</string>
+    <string name="result">Resultado:</string>
+    <string name="number_raffle">Números Sorteados:</string>
+    <string name="button_reset">Resetar</string>
+    <string name="hits">Acertos</string>
 </resources>

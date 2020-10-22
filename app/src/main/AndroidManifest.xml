@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity android:name=".activities.MainActivity"
             android:theme="@style/AppCompat.TelaCheia">
         </activity>
         <activity
-            android:name=".SplashActivity"
+            android:name=".activities.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/AppCompat.TelaCheia">
             <intent-filter>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <ImageView
         android:id="@+id/icon"
@@ -22,17 +22,14 @@
 
     <TextView
         android:id="@+id/textDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginLeft="19dp"
-        android:layout_marginTop="36dp"
+        style="@style/TextBase"
+        android:layout_marginTop="30dp"
         android:text="@string/text_description"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/icon" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/numbersEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -80,6 +77,82 @@
         android:text="@string/button_action"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/numbersEdit"
+        android:onClick="sendNumber"
+        />
+
+    <LinearLayout
+        android:id="@+id/containerResult"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/TextBase"
+            android:text="@string/number_raffle" />
+
+        <LinearLayout
+            android:id="@+id/numberResult"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textDescription">
+
+
+            <TextView
+                android:id="@+id/resultText1"
+                style="@style/TextResultBall" />
+
+            <TextView
+                android:id="@+id/resultText2"
+                style="@style/TextResultBall" />
+
+            <TextView
+                android:id="@+id/resultText3"
+                style="@style/TextResultBall" />
+
+            <TextView
+                android:id="@+id/resultText4"
+                style="@style/TextResultBall" />
+
+            <TextView
+                android:id="@+id/resultText5"
+                style="@style/TextResultBall" />
+            style="@style/TextResultBall" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/numberResult">
+
+            <TextView
+                android:id="@+id/resultText"
+                style="@style/TextBase"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                style="@style/TextBase"
+                android:text="@string/hits" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

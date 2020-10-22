@@ -6,7 +6,7 @@
     android:padding="16pt"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity"
+    tools:context=".activities.SplashActivity"
     android:orientation="vertical"
     android:background="@drawable/gradient"
     >

@@ -1,4 +1,4 @@
-package br.com.galaxyware.unilotto;
+package br.com.galaxyware.unilotto.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import br.com.galaxyware.unilotto.R;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -36,7 +38,7 @@ public class SplashActivity extends AppCompatActivity {
                 Handler handle = new Handler();
                 handle.postDelayed(new Runnable() {
                     @Override public void run() {
-                        startActivity(new Intent(SplashActivity.this,MainActivity.class));
+                        startActivity(new Intent(SplashActivity.this, MainActivity.class));
                     }
                 }, 2500);
             }
